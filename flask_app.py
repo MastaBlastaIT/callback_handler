@@ -5,11 +5,11 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
-    return 'Hello from Flask!'
+    return "Hello from Flask!"
 
 
-@app.route('/deploy_changes')
+@app.route("/deploy_changes", methods=["POST"])
 def deploy_changes():
-    return 'Successfully deployed!'
+    return "Successfully deployed!"
